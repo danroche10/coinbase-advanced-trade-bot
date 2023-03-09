@@ -1,0 +1,9 @@
+{
+  "product_id": "ETH-GBP",
+  "side": "BUY",
+  "order_configuration": {
+    "market_market_ioc": {
+      "quote_size": "0.9"
+    }
+  }
+}
