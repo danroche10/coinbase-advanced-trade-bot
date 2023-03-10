@@ -3,7 +3,7 @@ namespace trade_execution
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
-        private int _executionCount;
+        private int _executionCount = 0;
         private List<float> _indicatorCoinTodayAndYesterday = new List<float>();
         private readonly int oneHourInMilliseconds = 3600000;
 
@@ -17,11 +17,14 @@ namespace trade_execution
             while (!stoppingToken.IsCancellationRequested)
             {
                 _executionCount++;
-                
+
+                Console.WriteLine($"Execution Count: {_executionCount}");
+
                 await updatePriceComparisonList();
                 
                 if (_executionCount < 3)
                 {
+                    await Task.Delay(oneHourInMilliseconds, stoppingToken);
                     continue;
                 }
 
