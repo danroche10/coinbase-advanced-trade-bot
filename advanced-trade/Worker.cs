@@ -5,7 +5,7 @@ namespace trade_execution
         private readonly ILogger<Worker> _logger;
         private int _executionCount = 0;
         private List<float> _indicatorCoinTodayAndYesterday = new List<float>();
-        private readonly int oneHourInMilliseconds = 3600000;
+        private readonly int oneHourInMilliseconds = 900000;
 
         public Worker(ILogger<Worker> logger)
         {
@@ -63,13 +63,13 @@ namespace trade_execution
 
         private static void executeTrade(ExecuteCoinbaseTrade executeCoinbaseTrade, float indicatorCoinPriceChange)
         {
-            if (indicatorCoinPriceChange > 1.005)
+            if (indicatorCoinPriceChange > 1)
             {
                 Console.WriteLine("Buy order executed");
                 executeCoinbaseTrade.PlaceBuyOrder();
             }
 
-            if (indicatorCoinPriceChange < 0.995)
+            if (indicatorCoinPriceChange < 1)
             {
                 Console.WriteLine("Sell order executed");
                 executeCoinbaseTrade.PlaceSellOrder();
