@@ -3,7 +3,7 @@
   "side": "BUY",
   "order_configuration": {
     "market_market_ioc": {
-      "quote_size": "0.9"
+      "quote_size": "1"
     }
   }
 }

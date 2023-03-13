@@ -66,13 +66,13 @@ namespace trade_execution
             if (indicatorCoinPriceChange > 1.005)
             {
                 Console.WriteLine("Buy order executed");
-                //executeCoinbaseTrade.PlaceBuyOrder();
+                executeCoinbaseTrade.PlaceBuyOrder();
             }
 
             if (indicatorCoinPriceChange < 0.995)
             {
                 Console.WriteLine("Sell order executed");
-                //executeCoinbaseTrade.PlaceSellOrder();
+                executeCoinbaseTrade.PlaceSellOrder();
             }
         }
     }
