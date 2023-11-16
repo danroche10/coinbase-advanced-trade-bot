@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
-namespace trade_execution
+namespace execution_trade_strategy_1
 {
     public class CoinbaseOrderDetails
     {

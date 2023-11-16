@@ -1,6 +1,6 @@
 ﻿using RestSharp;
 
-namespace trade_execution
+namespace execution_trade_strategy_1
 {
     public class ExecuteCoinbaseTrade
     {

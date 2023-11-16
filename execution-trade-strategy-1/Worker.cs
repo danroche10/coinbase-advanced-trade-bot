@@ -1,4 +1,4 @@
-namespace trade_execution
+namespace execution_trade_strategy_1
 {
     public class Worker : BackgroundService
     {
@@ -63,13 +63,16 @@ namespace trade_execution
 
         private static void executeTrade(ExecuteCoinbaseTrade executeCoinbaseTrade, float indicatorCoinPriceChange)
         {
-            if (indicatorCoinPriceChange > 1)
+            double indicatorCoinPriceBuyTrigger = 1.05
+            double indicatorCoinPriceSellTrigger = 0.95
+
+            if (indicatorCoinPriceChange > indicatorCoinPriceBuyTrigger)
             {
                 Console.WriteLine("Buy order executed");
                 executeCoinbaseTrade.PlaceBuyOrder();
             }
 
-            if (indicatorCoinPriceChange < 1)
+            if (indicatorCoinPriceChange < indicatorCoinPriceSellTrigger)
             {
                 Console.WriteLine("Sell order executed");
                 executeCoinbaseTrade.PlaceSellOrder();

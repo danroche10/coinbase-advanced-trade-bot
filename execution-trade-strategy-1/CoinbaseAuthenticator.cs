@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace trade_execution
+namespace execution_trade_strategy_1
 {
     public class CoinbaseAuthenticator
     {
