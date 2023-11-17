@@ -17,7 +17,27 @@ Coinbase Advanced Trade Bot is a .NET-based project that implements an automated
 2. Navigate to the project directory and install dependencies.
 3. Configure your Coinbase API keys in the application settings.
 
-## Configuration
+# Run locally
+
+1. **Compile the Project**
+
+   Run the following command to build the project:
+
+   ```bash
+   dotnet build
+   ```
+
+2. **Run the Application**
+
+   Once the build is successful, you can run the application:
+
+   ```bash
+   dotnet run
+   ```
+
+   This will start the application and begin executing predefined strategies.
+
+## Cloud Configuration
 
 - Set up your Azure environment for WebJob deployment.
 - Configure trade strategy parameters and intervals in the application settings.
